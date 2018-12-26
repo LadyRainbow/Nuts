@@ -1,0 +1,213 @@
+section.sidebar {
+    padding-top: 33px;
+    padding-left: 34px;
+    padding-right: 26px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 14.72px 1.28px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    width: 100%;
+    .title-sidebar {
+        font-size: 16px;
+        font-family: 'akrobat-extrabold';
+        text-transform: uppercase;
+        margin-bottom: 17px;
+    }
+    #accordian-products {
+        h3 {
+            font-family: 'gotham';
+            font-size: 16px;
+            padding: 10px 0;
+            color: #717171;
+            border: 0;
+
+            &.main-title {
+                border-top: 1px solid #cbcbcb;
+                padding: 15px 0;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    right: -10px;
+                    top: 15px;
+                    content: '\f110';
+                    font-family: 'line-awesome';
+                    font-size: 20px;
+                }
+                &.ui-accordion-header-active {
+                    &::after {
+                        transform: rotate(180deg);
+                        color: #ffbf01;
+                    }
+                }
+                &:hover {
+                    &::after {
+                        color: #ffbf01;
+                    }
+                }
+            }
+        }
+        li {
+            font-family: 'gotham';
+            font-size: 16px;
+            color: #000000;
+            & + li {
+                padding-top: 10px;
+            }
+        }
+    }
+
+    .filters-wrp {
+        padding-top: 28px;
+        .title-sidebar {
+            margin-bottom: 21px;
+        }
+        .checkboxes-list {
+            li {
+                & + li {
+                    margin-top: 10px;
+                }
+                label.checkbox {
+                    margin: 0;
+                    cursor: pointer;
+                    input {
+                        position: absolute;
+                        z-index: -1;
+                        opacity: 0;
+                        margin: 0;
+                        &:checked + .checkbox__text:before {
+                            border: none;
+                            background: url('../img/check-icon.png') center no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                    .checkbox__text {
+                        color: #717171;
+                        font-family: 'gotham';
+                        font-size: 16px;
+                        position: relative;
+                        padding: 0 0 0 38px;
+                        line-height: 14px;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            width: 14px;
+                            height: 14px;
+                            border: 1px solid #aaaaaa;
+                            border-top-color: #b7b7b7;
+                            border-bottom-color: #b7b7b7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+    display: none;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    color: #000000/*{fcActive}*/;
+    text-decoration: none;
+}
+.ui-state-default a  {
+    color: #717171;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: none;
+}
+.ui-accordion .ui-accordion-content {
+    padding: 15px 17px;
+    padding-right: 0;
+    padding-top: 0;
+}
+.ui-accordion .ui-accordion-content.inner-list {
+    padding: 0px 20px;
+}
+.ui-widget-content {
+    border: none;
+}
+
+
+.slider-price-wrp {
+    border-top: 1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;
+    padding-top: 28px;
+    padding-bottom: 30px;
+    /* Ширина слайдера */
+    .inputs-wrp {
+        margin-top: 16px;
+        padding-left: 7px;
+        input {
+            color: #000;
+            display: inline-block;
+            width: 50px;
+            font-family: 'gotham';
+            font-size: 16px;
+            border: 1px solid transparent;
+        }
+        span {
+            font-size: 16px;
+            color: #a5a5a5;
+            font-family: 'gotham';
+        }
+    }
+
+    #slider {
+    	width: 200px;
+    }
+    /* Контейнер слайдера */
+    .ui-slider {
+    	position: relative;
+    }
+    /* Ползунок */
+    .ui-slider .ui-slider-handle {
+    	position: absolute;
+    	z-index: 2;
+    	width: 5px;   /* Задаем нужную ширину */
+    	height: 12px;  /* и высоту */
+    	background-color: #ffbf01;
+    	cursor: pointer
+    }
+    .ui-slider .ui-slider-range {
+    	position: absolute;
+    	z-index: 1;
+    	font-size: .7em;
+    	display: block;
+    	border: 0;
+    	overflow: hidden;
+    }
+    /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+    .ui-slider-horizontal {
+    	 height: 4px; /* задаем высоту согласно дизайна */
+    }
+    /* позиционируем ползунки */
+    .ui-slider-horizontal .ui-slider-handle {
+    	top: -4px;
+    	margin-left: 0;
+    }
+    .ui-slider-horizontal .ui-slider-range {
+    	top: 0;
+    	height: 100%;
+    }
+    .ui-slider-horizontal .ui-slider-range-min {
+    	left: 0;
+    }
+    .ui-slider-horizontal .ui-slider-range-max {
+    	right: 0;
+    }
+    /* оформление полосы по которой ходит ползунок */
+    .ui-widget-content {
+    	background: #cbcbcb;
+    }
+    /* оформление активного участка (между двумя ползунками) */
+    .ui-widget-header {
+    	background: #717171;
+    }
+    .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+        border-radius: 0;
+    }
+    .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+        border: none;
+    }
+}

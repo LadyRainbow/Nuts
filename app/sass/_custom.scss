@@ -1,0 +1,13 @@
+input {
+	font-family: 'gotham';
+	color: #717171;
+  &::placeholder {
+      font-family: 'gotham';
+      color: #a5a5a5;
+  }
+  &:focus {
+	  &::placeholder {
+	      color: transparent;
+	  }
+  }
+}

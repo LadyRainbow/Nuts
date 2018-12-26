@@ -1,0 +1,79 @@
+footer.footer {
+    width: 100%;
+    background-color: #717171;
+    .content {
+        padding-left: 76px;
+        padding-right: 67px;
+        padding-top: 32px;
+        padding-bottom: 23px;
+    }
+    .footer-top {
+        .logo-footer-wrp {
+            // margin-right: 68px;
+        }
+        .contacts-wrp {
+            text-align: center;
+            padding-top: 15px;
+            .fa-envelope {
+                opacity: .3;
+                color: #fff;
+                font-size: 25px;
+                margin-bottom: 5px;
+            }
+            a.mail {
+                display: block;
+                font-family: 'gotham';
+                color: #fff;
+                opacity: .55;
+                font-size: 16px;
+                margin-bottom: 18px;
+            }
+            .soc-accs-wrp {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        ul.nav-list-footer {
+            li {
+                position: relative;
+                padding-top: 12px;
+                padding-bottom: 14px;
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 153px;
+                    left: 0;
+                    bottom: 0;
+                    height: 1px;
+                    background-color: rgba(203, 203, 203, 0.302);
+                }
+                &:first-child {
+                    padding-top: 0;
+                }
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+                a {
+                    font-size: 16px;
+                    font-family: 'gotham';
+                    color: #fff;
+                    opacity: .55;
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        height: 50px;
+        width: 100%;
+        background-color: #5e5e5e;
+        p {
+            text-align: center;
+            font-family: 'gotham';
+            color: #fff;
+            opacity: .3;
+            line-height: 50px;
+        }
+    }
+}
