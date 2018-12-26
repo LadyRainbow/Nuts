@@ -1,1 +1,1 @@
-# Cupboard
+# Site structure: directory
